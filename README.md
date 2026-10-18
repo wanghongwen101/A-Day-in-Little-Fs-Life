@@ -1,4 +1,4 @@
-# A Day in Little F's Life 🎮
+# A Day in Little F's Life
 
 *A narrative-driven, choice-based game about surviving school, family expectations, and the consequences of everyday decisions.*
 
