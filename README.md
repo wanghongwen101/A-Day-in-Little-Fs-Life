@@ -1,211 +1,55 @@
-# A Day in Little F's Life
+A Day in Little F's Life
 
-*A narrative-driven, choice-based game about surviving school, family expectations, and the consequences of everyday decisions.*
+About the Game
 
-**Genre:** Interactive Fiction / Visual Novel / Life Simulation  
-**Engine:** Pygame  
-**Language:** English  
-**Development Status:** Completed Prototype (October 2026)
+A Day in Little F's Life is a text adventure game I created for my Creative Coding project at UTS.
 
----
+The game is based on some of my personal experiences in a Chinese middle school. I was inspired by games such as Ace Attorney and Needy Streamer Overload. I wanted to create a game where players could experience the school pressure and family problems that Little F faces.
 
-## About the Game
+Players will follow Little F's life over several days and make different choices. These choices can affect the story and lead to different endings.
 
-**A Day in Little F's Life** is a 2D interactive narrative game developed using Python and Pygame.
+Gameplay
 
-The game follows Little F, a Chinese high school student who desperately wants to attend a manga signing event featuring his favourite author, Tang Jia Lao Si.
+In the game, players can choose different activities during class, such as studying, eating, chatting or sleeping.
 
-However, his mother gives him one condition: **survive an entire school week without getting her called into school again.**
+There are three important stats: Hunger, Energy and Mood. Different choices will change these stats. If one of them reaches zero, the player may get a bad ending.
 
-What initially seems like a simple challenge gradually turns into a chaotic week filled with homework inspections, questionable friendships, school punishments, family conflicts, and unexpected moral dilemmas.
+Some choices also affect what happens later in the story. On the final day, players will enter a courtroom and may need to present evidence to reach the good ending.
 
-Players must manage Little F's physical and emotional well-being while making decisions that may have consequences several days later.
+Technologies
 
-Will Little F finally make it to the signing event, or will his choices lead to another disastrous ending?
+I used Python and Pygame to create this game. The project also uses NumPy.
 
-## Game Preview
+The main game code is in main.py, and the assets folder contains the images, character portraits, sound effects and music used in the game.
 
-![Game Cover](assets/cover.png)
+How to Run
 
-*The game features pixel-art environments, character portraits, animated dialogue, and interactive story events.*
+Download the project from GitHub by clicking Code → Download ZIP.
 
-## Gameplay and Features
+Extract the ZIP file completely.
 
-### 1. Branching Narrative
+Install Python 3 if you do not already have it.
 
-The story takes place across six in-game days, from Monday to Saturday.
+Open a terminal in the game folder.
 
-Player decisions can influence later events, character relationships, and the final outcome. Some choices have immediate consequences, while others only become relevant much later in the story.
+Install the required libraries:
 
-### 2. Resource Management
-
-Players must maintain three important statistics:
-
-| Statistic | Description |
-|---|---|
-| Hunger | Represents Little F's need for food and physical well-being. |
-| Energy | Represents tiredness and the ability to stay awake throughout the school day. |
-| Mood | Represents Little F's emotional state under social and academic pressure. |
-
-If any statistic reaches zero, the game can trigger a corresponding bad ending.
-
-### 3. Interactive School Events
-
-Players encounter various events, including classroom activities, homework inspections, conversations with classmates, examinations, and after-school situations.
-
-Choices affect both Little F's statistics and future story developments.
-
-### 4. Character Dialogue System
-
-The game includes:
-
-- Animated typewriter-style dialogue
-- Emotion-based character portraits
-- Character-specific Animalese-style voices
-- Dialogue sound effects synchronised with text
-- Scene-specific visual effects and transitions
-
-### 5. Multiple Endings
-
-Different combinations of decisions can produce different outcomes.
-
-Some endings are triggered by resource depletion or school disciplinary events. Others depend on choices made throughout the week.
-
-### 6. The Final Trial
-
-The final chapter introduces a courtroom-inspired sequence in which Little F must defend his right to attend the signing event.
-
-Players may need to present evidence obtained earlier in the game.
-
-The trial features dramatic visual effects, including **OBJECTION!**, **HOLD IT!**, and **TAKE THAT!**, along with an interactive evidence inventory.
-
-## Controls
-
-| Input | Function |
-|---|---|
-| Left Mouse Button | Select choices and interact with the interface |
-| Space | Advance dialogue |
-| F1 | Open the developer debugging menu |
-
-The debugging menu is intended for testing and is not necessary for ordinary gameplay.
-
-## Technologies Used
-
-- **Python 3** — Main programming language
-- **Pygame Community Edition** — Game window, rendering, input handling, and audio playback
-- **NumPy** — Processing audio samples for character-specific voice effects
-- **PNG Assets** — Pixel-art backgrounds, characters, and interface elements
-- **OGG Audio** — Background music and character sound effects
-
-The game uses a custom dialogue and scene-management system implemented in Python.
-
-## Installation and Setup
-
-### Requirements
-
-- Python 3
-- Pygame Community Edition
-- NumPy
-
-### Step 1 — Download the Project
-
-Clone the repository:
-
-```bash
-git clone https://github.com/wanghongwen101/A-Day-in-Little-Fs-Life.git
-```
-
-Or select **Code → Download ZIP** on GitHub, then extract the downloaded archive.
-
-### Step 2 — Install Dependencies
-
-Open a terminal in the project folder and run:
-
-```bash
 python -m pip install pygame-ce numpy
-```
 
-### Step 3 — Run the Game
+Start the game:
 
-```bash
 python main.py
-```
 
-**Important:** Keep `main.py` and the complete `assets` directory together. Moving or renaming resource files may prevent the game from launching.
+On Mac, you may need to use python3 instead of python for both commands.
 
-## Project Structure
+Please keep main.py and the assets folder in the same directory, otherwise the game may not load correctly.
 
-```text
-A-Day-in-Little-Fs-Life/
-│
-├── main.py
-├── README.md
-│
-└── assets/
-    ├── cover.png
-    ├── scene1.png
-    ├── ...
-    ├── scene30.png
-    ├── portraits/
-    │   ├── little_f/
-    │   ├── mom/
-    │   ├── dad/
-    │   └── ...
-    ├── voices/
-    │   ├── light/
-    │   ├── deep/
-    │   ├── squeaky/
-    │   └── ...
-    └── [other UI and audio assets]
-```
+About This Project
 
-All visual and audio assets are loaded relative to the game's main directory.
+This is my first attempt at making a relatively large text adventure game. During development, I learned how to use variables, loops, functions and conditional statements to control a story.
 
-## Creative Concept
+I also encountered many bugs, especially when adding new scenes and choices. Although my code is not perfect and still needs better organisation, I learned a lot about programming and game design from this project.
 
-The project explores the pressures of everyday student life through interactive storytelling and dark humour.
+Some visual assets were created with the assistance of ChatGPT, which I also used to help check coding errors.
 
-Rather than simply describing the expectations placed on young people, the game allows players to experience them through decisions, resource management, and narrative consequences.
-
-The three statistics — Hunger, Energy, and Mood — reflect the tension between physical needs, emotional well-being, and academic expectations.
-
-The final courtroom sequence transforms family authority into a literal game mechanic, bringing together the player's earlier decisions in an absurd and comedic conclusion.
-
-## Development Process
-
-The prototype was developed over approximately **two weeks, with around 30 hours of development work**.
-
-Major development challenges included managing interconnected story branches, synchronising dialogue and sound effects, handling scene transitions, and ensuring decisions remained consistent across multiple in-game days.
-
-The project also served as an opportunity to experiment with Python programming and interactive narrative design.
-
-## Inspirations
-
-The project draws creative inspiration from several games, including:
-
-- *Ace Attorney* — Dramatic courtroom presentation and evidence mechanics
-- *Disco Elysium* — Narrative choices and character-state systems
-- *60 Seconds!* — Decision-making and resource management
-- *Do Not Feed the Monkeys* — Observation, interaction, and the consequences of player decisions
-
-These references informed the design approach, while the story focuses on an original fictionalised school-life setting.
-
-## Project Status
-
-**Completed — October 2026**
-
-This repository contains the completed classroom prototype.
-
-Future improvements could include restructuring the scene-management system, expanding player interactions, improving accessibility, and refining the balance between dialogue and gameplay.
-
-## Credits
-
-**Game Concept, Narrative Design, and Development:** Zhengzheng Fang
-
-**Tools and Libraries:** Python, Pygame Community Edition, NumPy
-
-Asset attribution and usage permissions should be documented separately where applicable.
-
----
-
-*Thanks for checking out A Day in Little F's Life!*
+I hope players can understand some of the feelings and experiences I wanted to express through this game.
